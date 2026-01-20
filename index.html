@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+<!-- linkcnd -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container-fluid ">
+    <div class="row" style="background-color: rgb(126, 126, 228);">
+<div class="col-sm-1">
+    <center>
+    <img id="image" src="logoforstms.png" alt="no image loading" style="height:50px;border-radius:50%;">
+</center>    
+</div>
+
+    <div class="col-sm-9">
+    <p id="webname">Students Management System
+        <nav>
+<a id="home" href="index.html"> <i class="fa-regular fa-house  "style="font-size:30px;margin-right:3px;"></i>Home</a>
+    <a id="about" href="about.html"><i class="fa-brands fa-accusoft "style="font-size:30px;margin-left:40px;"></i>About</a>
+    <a id="contact" href="contact.html"> <i class="fa-solid fa-phone-volume fa-shake"style="font-size:28px;margin-left:20px;"></i>Contact Us</a>
+
+
+</nav>
+    </p>
+    </div>
+
+<div class="col-sm-2">
+    <div  id="sociallogo">
+    
+        <i class="fa-brands fa-facebook fa-beat" style="color: #18e9ec;font-size:25px;"></i>
+        <i class="fa-brands fa-x-twitter fa-beat"style="font-size:25px;color: #18e9ec; margin-left:10px; transition: 10s;"></i>
+        <i class="fa-brands fa-youtube fa-beat"style="font-size:25px;color: #18e9ec;margin-left:10px;"></i>
+        <i class="fa-brands fa-linkedin fa-beat"style="font-size:25px;color: #18e9ec;margin-left:10px;"></i>
+        
+    </div>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Student Form -->
+        <div class="col-md-12">
+            <center>
+                <h4 style="font-size: 40px; color: cyan;">Add Student</h4>
+            </center>
+
+            <form id="studentForm">
+                <div class="mb-2">
+                    <label>Name</label>
+                    <input type="text" id="name" class="form-control">
+                </div>
+
+                <div class="mb-2">
+                    <label>Roll No</label>
+                    <input type="text" id="roll" class="form-control">
+                </div>
+
+                <div class="mb-2">
+                    <label>Course</label>
+                    <input type="text" id="course" class="form-control">
+                </div>
+
+                <button type="button" class="btn btn-primary w-100" onclick="addStudent()">
+                    Add Student
+                </button>
+            </form>
+        </div>
+        </div>
+        </div>
+<div class="container-fluid">
+    <div class="row">
+<br>
+<br>
+<br>
+
+
+        <!-- Student Table -->
+        <div id="studentlist" class="col-md-12"><center>
+            <h4 style="font-size: 40px;color:cyan;">Student List</h4>
+            </center>
+<input type="text" id="search" class="form-control mb-2"
+       placeholder="Search student..."
+       onkeyup="searchStudent()">
+
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Roll</th>
+                        <th>Course</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable">
+                    <!-- JS se data aayega -->
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+   <center><button onclick="tableprint()" id="save">save</button></center> 
+<!-- JS -->
+<script src="javascript/javas.js"></script>
+<!-- FOOTER -->
+<footer class="text-center py-3 bg-dark text-light">
+    © 2026 Student Management System | All Rights Reserved
+</footer>
+</body>
+</html>
